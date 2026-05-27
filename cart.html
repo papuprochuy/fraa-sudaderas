@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fraa - Carrito</title>
+    <script
+      src="https://kit.fontawesome.com/aca7cafb64.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"><img src="img/logo.png" class="logo" alt="" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="lg-bag">
+            <a class="active" href="cart.html"
+              ><i class="fa-solid fa-bag-shopping"></i
+            ></a>
+          </li>
+          <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fa-solid fa-bars"></i>
+      </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+      <h3>#TuCarrito</h3>
+      <b>Revisa tus productos antes de comprar</b>
+    </section>
+
+    <section id="cart" class="section-p1">
+      <table width="100%">
+        <thead>
+          <tr>
+            <td>Quitar</td>
+            <td>Imagen</td>
+            <td>Producto</td>
+            <td>Precio</td>
+            <td>Cantidad</td>
+            <td>Subtotal</td>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Las filas se generan dinámicamente -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+      <div id="subtotal">
+        <h2>Compra Total</h2>
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>Envío</td>
+            <td>$10</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>$10</strong></td>
+          </tr>
+        </table>
+        <button class="normal" id="checkout-btn">
+          Continuar con el checkout
+        </button>
+      </div>
+    </section>
+
+    <!-- Modal para elegir destinatario -->
+    <div id="destinatario-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Elige a quién enviar el pedido</h3>
+        <button id="dest-dueno" class="modal-btn">Dueño (462 289 8361)</button>
+        <button id="dest-trabajador" class="modal-btn">
+          Trabajador (462 217 0940)
+        </button>
+      </div>
+    </div>
+
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="img/logo.png" alt="" />
+        <h4>Contact</h4>
+        <p>
+          <strong>Direccion:</strong>Para venir al negocio agenda tu cita por
+          WhatsApp
+        </p>
+        <p><strong>Telefono:</strong>462 289 8361</p>
+        <p><strong>Respuestas:</strong>6:00 a 12:00</p>
+        <div class="follow">
+          <h4>Siguenos</h4>
+          <div class="icon">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-tiktok"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Sobre nosotros</h4>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Informacion de envio WhatsApp</a>
+        <a href="#">Politica de privacidad</a>
+        <a href="#">Terminos y Condiciones</a>
+        <a href="#">Contactanos en WhatsApp</a>
+      </div>
+      <div class="copyright">
+        <p>© 2026, fraa - fraa</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

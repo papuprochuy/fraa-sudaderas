@@ -206,7 +206,7 @@ function calcularTotales() {
     const carrito = obtenerCarrito();
     let subtotal = 0;
     carrito.forEach(item => subtotal += item.precio * item.cantidad);
-    return { subtotal, total: subtotal + SHIPPING_COST };
+    return { subtotal, total: subtotal };
 }
 
 function renderizarCarrito() {
@@ -222,7 +222,7 @@ function renderizarCarrito() {
     if (carrito.length === 0) {
         tablaBody.innerHTML = '<tr><td colspan="6" style="text-align:center;">Tu carrito está vacío</td></tr>';
         if (subtotalElement) subtotalElement.textContent = '$0';
-        if (totalElement) totalElement.textContent = '$' + SHIPPING_COST;
+        if (totalElement) totalElement.textContent = '$0';
         return;
     }
 
@@ -245,7 +245,7 @@ function renderizarCarrito() {
     });
 
     if (subtotalElement) subtotalElement.textContent = '$' + subtotalGeneral;
-    if (totalElement) totalElement.textContent = '$' + (subtotalGeneral + SHIPPING_COST);
+    if (totalElement) totalElement.textContent = '$' + subtotalGeneral;
 
     document.querySelectorAll('.eliminar-item').forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -398,7 +398,7 @@ function enviarWhatsApp(numero) {
         mensaje += `- ${item.nombre} (Talla: ${item.talla}, Color: ${item.color}) x ${item.cantidad} = $${item.precio * item.cantidad}%0A`;
     });
     mensaje += `%0A*Subtotal:* $${subtotal}%0A`;
-    mensaje += `*Envío:* $${SHIPPING_COST}%0A`;
+    mensaje += `*Envío:* variable según zona%0A`;
     mensaje += `*Total:* $${total}%0A`;
     mensaje += '%0A¿Está disponible?';
 
@@ -514,8 +514,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnDueno = document.getElementById('dest-dueno');
     const btnTrabajador = document.getElementById('dest-trabajador');
-    if (btnDueno) btnDueno.addEventListener('click', () => enviarWhatsApp('4622898361'));
-    if (btnTrabajador) btnTrabajador.addEventListener('click', () => enviarWhatsApp('4622170940'));
+    if (btnDueno) btnDueno.addEventListener('click', () => enviarWhatsApp('4622170940'));
+    if (btnTrabajador) btnTrabajador.addEventListener('click', () => enviarWhatsApp('4621101663'));
 
     // Renderizar carrito si estamos en cart.html
     renderizarCarrito();

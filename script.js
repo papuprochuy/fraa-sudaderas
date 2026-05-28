@@ -514,8 +514,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnDueno = document.getElementById('dest-dueno');
     const btnTrabajador = document.getElementById('dest-trabajador');
-    if (btnDueno) btnDueno.addEventListener('click', () => enviarWhatsApp('4622170940'));
-    if (btnTrabajador) btnTrabajador.addEventListener('click', () => enviarWhatsApp('4621101663'));
+    if (btnDueno) btnDueno.addEventListener('click', () => enviarWhatsApp('524622170940'));
+    if (btnTrabajador) btnTrabajador.addEventListener('click', () => enviarWhatsApp('524621101663'));
 
     // Renderizar carrito si estamos en cart.html
     renderizarCarrito();
